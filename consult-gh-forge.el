@@ -110,7 +110,7 @@ Only lists the repositories added by consult-gh (stored in `consult-gh-forge--ad
 
 See forge documentation for `forge-pull-topic'."
   (let ((repo (forge-get-repository url)))
-    (forge--zap-repository-cache repo)
+    ;(forge--zap-repository-cache repo)
     (forge--pull-topic repo
                        (forge-issue :repository (oref repo id)
                                     :number topic))
